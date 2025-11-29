@@ -23,7 +23,7 @@ export default function AgentsPage() {
             <AgentCard
               key={index}
               name={agent.name}
-              status={agent.status}
+              status={agent.status as "active" | "coming-soon"}
             />
           ))}
         </div>
