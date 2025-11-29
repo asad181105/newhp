@@ -29,8 +29,12 @@ export default function AnimatedBackground() {
       speedY: number;
       opacity: number;
       color: string;
+      canvas: HTMLCanvasElement;
+      ctx: CanvasRenderingContext2D;
 
-      constructor() {
+      constructor(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
+        this.canvas = canvas;
+        this.ctx = ctx;
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.size = Math.random() * 3 + 1;
@@ -45,18 +49,17 @@ export default function AnimatedBackground() {
         this.y += this.speedY;
 
         // Wrap around edges
-        if (this.x > canvas.width) this.x = 0;
-        if (this.x < 0) this.x = canvas.width;
-        if (this.y > canvas.height) this.y = 0;
-        if (this.y < 0) this.y = canvas.height;
+        if (this.x > this.canvas.width) this.x = 0;
+        if (this.x < 0) this.x = this.canvas.width;
+        if (this.y > this.canvas.height) this.y = 0;
+        if (this.y < 0) this.y = this.canvas.height;
       }
 
       draw() {
-        if (!ctx) return;
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
+        this.ctx.fillStyle = this.color;
+        this.ctx.beginPath();
+        this.ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        this.ctx.fill();
       }
     }
 
@@ -65,13 +68,12 @@ export default function AnimatedBackground() {
     const particleCount = 50;
 
     for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
+      particles.push(new Particle(canvas, ctx));
     }
 
     // Animation loop
     let animationFrameId: number;
     const animate = () => {
-      if (!ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Draw connections between nearby particles
