@@ -1,0 +1,15 @@
+{
+  "siteTitle": "Hybrid Pillars",
+  "agents": [
+    { "name": "AI Caller Agent", "status": "active" },
+    { "name": "HR Agent", "status": "coming-soon" },
+    { "name": "Marketing Agent", "status": "coming-soon" },
+    { "name": "Sales Agent", "status": "coming-soon" },
+    { "name": "Support Agent", "status": "coming-soon" }
+  ],
+  "landingPage": {
+    "heroHeading": "Explore Our Agents",
+    "ctaText": "View AI Agents"
+  }
+}
+
