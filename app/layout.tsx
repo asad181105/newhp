@@ -8,11 +8,10 @@ export const metadata: Metadata = {
   description: "Explore AI agents powered by Hybrid Pillars",
   icons: {
     icon: [
-      { url: "/logo.svg", type: "image/svg+xml" },
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/hp_logo.png", type: "image/png" },
     ],
-    shortcut: "/logo.svg",
-    apple: "/logo.svg",
+    shortcut: "/hp_logo.png",
+    apple: "/hp_logo.png",
   },
 };
 

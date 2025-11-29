@@ -9,12 +9,12 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-black/95 backdrop-blur-md border border-gray-800 rounded-full shadow-xl">
-      <div className="px-6 sm:px-8">
-        <div className="flex items-center justify-between h-14">
+      <div className="px-10 sm:px-16 lg:px-20">
+        <div className="flex items-center justify-between h-14 gap-8">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo.svg"
+              src="/hp_logo.png"
               alt="Hybrid Pillars"
               width={150}
               height={60}
@@ -24,7 +24,7 @@ export default function Navbar() {
           </Link>
 
           {/* Navigation Links */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-10">
             <Link
               href="/agents"
               className={`text-sm font-medium transition-colors duration-200 ${

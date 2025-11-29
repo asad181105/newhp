@@ -1,0 +1,75 @@
+<div style="font-family: system-ui, sans-serif, Arial; font-size: 12px">
+  <div style="margin-bottom: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #f97316;">
+    <div style="font-size: 16px; font-weight: bold; color: #2c3e50; margin-bottom: 8px;">
+      New Contact Form Submission
+    </div>
+    <div style="color: #666; font-size: 14px;">
+      A message by <strong>{{from_name}}</strong> has been received regarding <strong>{{agent_name}}</strong>. Kindly respond at your earliest convenience.
+    </div>
+  </div>
+
+  <div
+    style="
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    "
+  >
+    <table role="presentation" style="width: 100%; border-collapse: collapse;">
+      <tr>
+        <td style="vertical-align: top; padding-right: 15px;">
+          <div
+            style="
+              padding: 12px 15px;
+              background-color: #fef3c7;
+              border-radius: 8px;
+              font-size: 32px;
+              width: 60px;
+              height: 60px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+            role="img"
+          >
+            👤
+          </div>
+        </td>
+        <td style="vertical-align: top; width: 100%;">
+          <div style="color: #2c3e50; font-size: 18px; font-weight: bold; margin-bottom: 5px;">
+            {{from_name}}
+          </div>
+          <div style="color: #6b7280; font-size: 13px; margin-bottom: 15px;">
+            📧 {{from_email}} | 📞 {{phone}}
+          </div>
+          
+          <div style="margin-bottom: 15px; padding: 12px; background-color: #f9fafb; border-radius: 6px; border-left: 3px solid #f97316;">
+            <div style="color: #6b7280; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px;">
+              Interested In:
+            </div>
+            <div style="color: #f97316; font-size: 16px; font-weight: 600;">
+              {{agent_name}}
+            </div>
+          </div>
+
+          <div style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed #e5e7eb;">
+            <div style="color: #6b7280; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
+              Message:
+            </div>
+            <p style="font-size: 15px; color: #374151; line-height: 1.6; margin: 0; white-space: pre-wrap;">
+              {{message}}
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="margin-top: 20px; padding: 12px; background-color: #f3f4f6; border-radius: 6px; text-align: center; color: #6b7280; font-size: 11px;">
+    This is an automated message from the Hybrid Pillars contact form.
+  </div>
+</div>
+

@@ -69,9 +69,12 @@ export default function AgentCard({ name, status }: AgentCardProps) {
     </div>
   );
 
+  // Create URL-friendly agent name for routing
+  const agentSlug = name.toLowerCase().replace(/\s+/g, "-");
+  
   if (isActive) {
     return (
-      <Link href="/caller-agent" className="block">
+      <Link href={`/agent-form/${agentSlug}`} className="block">
         {cardContent}
       </Link>
     );
