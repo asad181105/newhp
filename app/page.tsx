@@ -10,7 +10,7 @@ export default function Home() {
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-white tracking-tight">
           <span className="block mb-2">{config.landingPage.heroHeading}</span>
           <span className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-400 mt-4 block">
-            Powered by AI
+            Powered through AI
           </span>
         </h1>
         <Link href="/agents">
